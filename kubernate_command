@@ -1,0 +1,7 @@
+kubectl got pods 
+
+kubectl got pods  -o wide
+
+kubectl describe pod 
+
+kubectl describe node node1
