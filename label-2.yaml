@@ -1,0 +1,58 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mahesh-front
+  labels:
+    app: sre
+    managed-by: vagrant
+    version: "10"
+    component: backend
+    part-of: Library
+    instance: may2025
+    env: dev
+    client: oracle
+spec:
+  containers:
+    - name: networknuts-app
+      image: lovelearnlinux/webserver:v1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: milind-book
+  labels:
+    app: linux
+    managed-by: db
+    version: "11"
+    component: frontend
+    part-of: Library
+    instance: may2024
+    env: prod
+    client: postgress
+spec:
+  containers:
+    - name: gaurav-container
+      image: coolgourav147/nginx-custom
+      env:
+        - name: myname
+          value: gaurav
+        - name: city
+          value: jaipur
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: anirudh-book
+  labels:
+    app: carbon
+    managed-by: gsap
+    version: "8.26"
+    component: backend
+    part-of: security
+    instance: may2024
+    env: qa
+    client: brodcom
+spec:
+  containers:
+    - name: networknuts-app
+      image: lovelearnlinux/webserver:v1
